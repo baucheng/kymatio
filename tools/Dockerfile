@@ -4,7 +4,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common && \
     add-apt-repository ppa:graphics-drivers/ppa && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
-      libnvidia-compute-410 \
+      libnvidia-compute-418=418.56-\* \
       nvidia-cuda-toolkit \
       python3-scipy \
       python3-appdirs \
