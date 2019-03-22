@@ -17,6 +17,7 @@ pipeline {
 	HOME = pwd(tmp:true)
       }
       steps {
+	sh 'python3 -c "import torch; torch.cuda.current_device()"'
 	sh 'python3 -m venv --system-site-packages --without-pip $HOME'
 	sh '''#!/bin/bash -ex
 	  source $HOME/bin/activate
