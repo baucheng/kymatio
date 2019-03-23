@@ -14,7 +14,7 @@ pipeline {
 	}
       }
       environment {
-	HOME = pwd(tmp:true)
+	HOME = "$WORKSPACE/build"
       }
       steps {
 	sh 'python3 -c "import torch; torch.cuda.current_device()"'
@@ -35,7 +35,7 @@ pipeline {
 	}
       }
       environment {
-	HOME = pwd(tmp:true)
+	HOME = "$WORKSPACE/build"
       }
       steps {
 	sh 'python3 -m venv --system-site-packages --without-pip $HOME'
